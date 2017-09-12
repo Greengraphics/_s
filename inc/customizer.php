@@ -1,6 +1,6 @@
 <?php
 /**
- * _s Theme Customizer
+ * ggstyle Theme Customizer
  *
  * @package ggstyle
  */
