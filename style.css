@@ -343,6 +343,7 @@ body {
     background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
+<<<<<<< HEAD
 blockquote:before,
 blockquote:after,
 q:before,
@@ -355,6 +356,8 @@ q {
     quotes: "" "";
 }
 
+=======
+>>>>>>> a0ee266deeb7c39f1dc0fc02b2a7695c9daa200d
 hr {
     background-color: #ccc;
     border: 0;
