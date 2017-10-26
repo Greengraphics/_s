@@ -2,10 +2,7 @@
   "name": "ggstyle",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "style.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Greengraphics/ggstyle.git"
@@ -16,24 +13,10 @@
     "url": "https://github.com/Greengraphics/ggstyle/issues"
   },
   "homepage": "https://github.com/Greengraphics/ggstyle#readme",
-  "dependencies": {
-    "autoprefixer": "^7.1.4",
-    "eslint": "^4.7.1",
-    "eslint-config-google": "^0.9.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "postcss": "^6.0.11",
-    "stylelint": "^8.1.1",
-    "stylelint-config-standard": "^17.0.0"
-  },
   "browserslist": [
-    "last 2 versions",
-    "Safari >= 9"
+    "extends browserslist-config-wordpress"
   ],
-  "stylelint" : {
+  "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
       "indentation": 4,
@@ -42,8 +25,10 @@
       "declaration-no-important": true
     }
   },
-  "eslint" : {
-    "extends": ["google"],
+  "eslint": {
+    "extends": [
+      "google"
+    ],
     "parserOptions": {
       "ecmaVersion": 5
     },
@@ -56,5 +41,26 @@
       "max-len": "warn",
       "require-jsdoc": "warn"
     }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imgOp": "imageOptim -d ./assets/img/",
+    "webp": "for f in ./assets/img/*.jpg; do cwebp -q 85 $f -o ${f%.*}'.webp'; done",
+    "images": "imgOp webp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "eslint": "^4.7.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "imagemin-cli": "^3.0.0",
+    "postcss-cli": "^4.1.1",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0"
   }
 }

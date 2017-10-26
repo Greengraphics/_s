@@ -20,34 +20,6 @@
     <exclude-pattern>*.min.js</exclude-pattern>
 
     <!-- Include the WordPress-Extra standard. -->
-    <rule ref="WordPress">
-        <!--
-        We may want a middle ground though. The best way to do this is add the
-        entire ruleset, then rule by rule, remove ones that don't suit a project.
-        We can do this by running `phpcs` with the '-s' flag, which allows us to
-        see the names of the sniffs reporting errors.
-        Once we know the sniff names, we can opt to exclude sniffs which don't
-        suit our project like so.
+    <rule ref="WordPress"></rule>
 
-        The below two examples just show how you can exclude rules.
-        They are not intended as advice about which sniffs to exclude.
-        -->
-
-        <!--
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"/>
-        <exclude name="WordPress.XSS.EscapeOutput"/>
-        -->
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.OpenBraceNotSameLine"/>
-        <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed"/>
-        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
-        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"/>
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis"/>
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"/>
-    </rule>
-
-    <rule ref="PSR2">
-        <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
-        <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine"/>
-    </rule>
-    
 </ruleset>
